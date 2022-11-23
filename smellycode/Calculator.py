@@ -24,3 +24,17 @@ class Calculator:
     def not_implemented_method(self):
         pass
 
+    def raise_method(self):
+        try:
+            raise  # Noncompliant
+        except ValueError as e:
+            self.handle_error()
+        except:
+            raise
+        self.duplicated_handle_error()
+
+    def handle_error(self):
+        raise  # Noncompliant. This works but is hard to understand.
+
+    def duplicated_handle_error(self):
+        raise  # Noncompliant. This works but is hard to understand.
