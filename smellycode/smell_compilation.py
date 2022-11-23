@@ -79,3 +79,19 @@ class SmellyClass:
             return "six"
         if (i==1):
             return "one"
+
+    def return_String_value2(self, i):
+        if (i==1):
+            return "one"
+        if (i==2):
+            return "two"
+        if (i==3):
+            return "three"
+        if (i==4):
+            return "four"
+        if (i==5):
+            return "five"
+        if (i==6):
+            return "six"
+        if (i==1):
+            return "one"
