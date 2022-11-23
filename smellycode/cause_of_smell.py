@@ -1,7 +1,7 @@
 import csv
 
 
-class Calculator:
+class SmellyClass:
     def __init__(self):
         self.total = 0
 
