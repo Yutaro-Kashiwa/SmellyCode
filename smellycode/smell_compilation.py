@@ -50,16 +50,4 @@ class SmellyClass:
             pass
         return my_none
 
-    def add_value(self, a, b):
-        if a == None:
-            return None
-        if b == None:
-            return None
-        return a + b
 
-    def plus_value(self, a, b):
-        if a == None:
-            return None
-        if b == None:
-            return None
-        return a + b
