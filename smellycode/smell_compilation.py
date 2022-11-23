@@ -5,7 +5,7 @@ class SmellyClass:
     def __init__(self):
         self.total = 0
 
-    def return_invariant_value(self, a):  # NonCompliant
+    def return_invariant_value(self, a):
         b = 12
         if a == 1:
             return b
@@ -31,10 +31,34 @@ class SmellyClass:
             self.handle_error()
         except:
             raise
-        self.duplicated_handle_error()
+        self.same_handle_error()
 
     def handle_error(self):
         raise  # Noncompliant. This works but is hard to understand.
 
-    def duplicated_handle_error(self):
+    def same_handle_error(self):
         raise  # Noncompliant. This works but is hard to understand.
+
+    def check_my_none(self):
+        my_none = None
+        if my_none == None:
+            pass
+        if my_none is not None:
+            pass
+        if my_none == None:
+            pass
+        return my_none
+
+    def add_value(self, a, b):
+        if a == None:
+            raise
+        if b == None:
+            raise
+        return a + b
+
+    def plus_value(self, a, b):
+        if a == None:
+            raise
+        if b == None:
+            raise
+        return a + b
