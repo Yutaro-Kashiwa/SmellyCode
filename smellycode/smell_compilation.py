@@ -63,3 +63,19 @@ class SmellyClass:
         if b == None:
             return None
         return a + b
+
+    def return_String_value(self, i):
+        if (i==1):
+            return "one"
+        if (i==2):
+            return "two"
+        if (i==3):
+            return "three"
+        if (i==4):
+            return "four"
+        if (i==5):
+            return "five"
+        if (i==6):
+            return "six"
+        if (i==1):
+            return "one"
