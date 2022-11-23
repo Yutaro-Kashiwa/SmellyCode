@@ -12,11 +12,12 @@ class SmellyClass:
         return b
 
     look_up = False
-    def look_up(self): # method name does not fit
+
+    def look_up(self):  # method name does not fit
         return self.look_up
 
     def one_variable_is_not_used(self, a1, a2, a3):
-        return a1*a2
+        return a1 * a2
 
     def the_first_variable_should_be_self(yours):
         return None
@@ -51,14 +52,14 @@ class SmellyClass:
 
     def add_value(self, a, b):
         if a == None:
-            raise
+            return None
         if b == None:
-            raise
+            return None
         return a + b
 
     def plus_value(self, a, b):
         if a == None:
-            raise
+            return None
         if b == None:
-            raise
+            return None
         return a + b
