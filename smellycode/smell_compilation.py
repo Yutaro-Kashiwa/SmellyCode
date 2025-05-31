@@ -1,97 +1,54 @@
-import csv
-
-
-class SmellyClass:
+class RefactoredClass:
     def __init__(self):
         self.total = 0
+        self._lookup_flag = False
 
-    def return_invariant_value(self, a):
-        b = 12
-        if a == 1:
-            return b
-        return b
+    def get_constant_value(self):
+        return 12
 
-    look_up = False
+    def get_lookup_flag(self):
+        return self._lookup_flag
 
-    def look_up(self):  # method name does not fit
-        return self.look_up
-
-    def one_variable_is_not_used(self, a1, a2, a3):
+    def multiply_values(self, a1, a2):
         return a1 * a2
 
-    def the_first_variable_should_be_self(yours):
+    def instance_method(self):
         return None
 
-    def not_implemented_method(self):
-        pass
+    def placeholder_method(self):
+        raise NotImplementedError("This method needs to be implemented")
 
-    def raise_method(self):
+    def process_with_error_handling(self):
         try:
-            raise  # Noncompliant
-        except ValueError as e:
-            self.handle_error()
-        except:
+            raise ValueError("Specific error occurred")
+        except ValueError:
+            self._handle_value_error()
+        except Exception:
             raise
-        self.same_handle_error()
 
-    def handle_error(self):
-        raise  # Noncompliant. This works but is hard to understand.
+    def _handle_value_error(self):
+        raise ValueError("Error handling failed")
 
-    def same_handle_error(self):
-        raise  # Noncompliant. This works but is hard to understand.
-
-    def check_my_none(self):
+    def check_none_value(self):
         my_none = None
-        if my_none == None:
+        if my_none is None:
             pass
         if my_none is not None:
             pass
-        if my_none == None:
-            pass
         return my_none
 
-    def add_value(self, a, b):
-        if a == None:
-            return None
-        if b == None:
+    def add_values(self, a, b):
+        if a is None or b is None:
             return None
         return a + b
 
-    def plus_value(self, a, b):
-        if a == None:
-            return None
-        if b == None:
-            return None
-        return a + b
-
-    def return_String_value(self, i):
-        if (i==1):
-            return "one"
-        if (i==2):
-            return "two"
-        if (i==3):
-            return "three"
-        if (i==4):
-            return "four"
-        if (i==5):
-            return "five"
-        if (i==6):
-            return "six"
-        if (i==1):
-            return "one"
-
-    def return_String_value2(self, i):
-        if (i==1):
-            return "one"
-        if (i==2):
-            return "two"
-        if (i==3):
-            return "three"
-        if (i==4):
-            return "four"
-        if (i==5):
-            return "five"
-        if (i==6):
-            return "six"
-        if (i==1):
-            return "one"
+    def get_number_name(self, i):
+        number_names = {
+            1: "one",
+            2: "two",
+            3: "three",
+            4: "four",
+            5: "five",
+            6: "six"
+        }
+        return number_names.get(i, None)
